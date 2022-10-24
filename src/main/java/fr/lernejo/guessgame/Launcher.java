@@ -4,6 +4,10 @@ import java.security.SecureRandom;
 
 public class Launcher {
     public static void main(String[] args) {
+        if(args.length == 0) {
+            help();
+            return;
+        }
         switch (args[0]) {
             case "-interactive":
                 interactively();
